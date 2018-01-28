@@ -12,6 +12,6 @@ With that you can generate an API Key and Secret pair, which you need in the pro
 Last step is to change the line <artifactId>j2v8_macosx_x86_64</artifactId> in the pom.xml file to your own operating 
 system.
 
-Windows: j2v8_win32_x86_64
-macOS:   j2v8_macosx_x86_64
+Windows: j2v8_win32_x86_64 \n
+macOS:   j2v8_macosx_x86_64 \n
 Linux:   j2v8_linux_x86_64
