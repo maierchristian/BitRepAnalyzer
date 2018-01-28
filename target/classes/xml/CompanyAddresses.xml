@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompanyAddresses NumberOfAddresses="5">
+	<adr name="Blocktrail" address="1NcXPMRaanz43b1kokpPuYDdk6GGDvxT2T" score="15"></adr>
+	<adr name="Starcups" address="123456" score="10"> </adr>
+	<adr name="Pipe" address="123456" score="30"> </adr>
+	<adr name="Pizza Queen" address="123456" score = "-10"> </adr>
+	<adr name="Macrohard" address="123456" score="50"> </adr>
+</CompanyAddresses>

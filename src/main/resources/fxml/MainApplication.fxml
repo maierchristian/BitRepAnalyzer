@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="mainApplicationMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="864.0" prefWidth="1536.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="btc.analyzer.controller.MainApplicationController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="30.0" layoutX="818.0" layoutY="568.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="650.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="30.0" layoutX="818.0" layoutY="478.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="650.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="30.0" layoutX="818.0" layoutY="388.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="650.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="30.0" layoutX="33.0" layoutY="323.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="30.0" layoutX="33.0" layoutY="603.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="30.0" layoutX="33.0" layoutY="534.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="30.0" layoutX="33.0" layoutY="463.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="30.0" layoutX="33.0" layoutY="393.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="30.0" layoutX="818.0" layoutY="299.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="650.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="30.0" layoutX="33.0" layoutY="253.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
+      <Text layoutX="59.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bitcoin Reputation Analyzer" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
+      <Button id="checkAddress" fx:id="checkAddress" disable="true" layoutX="99.0" layoutY="147.0" mnemonicParsing="false" onAction="#displayInformation" prefHeight="27.0" prefWidth="125.0" text="Check Address" />
+      <Button id="evaluateAddress" fx:id="evaluateAddress" disable="true" layoutX="309.0" layoutY="147.0" mnemonicParsing="false" onAction="#startEvaluate" text="Evaluate Address" />
+      <Text layoutX="49.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="660.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hash:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Transactions Out:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Transactions In:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unconfirmed Transactions:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unconfirmed Sent:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unconfirmed Received:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sent">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Received">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="unconfirmed_trans_Out" fx:id="unconfirmed_trans_Out" layoutX="309.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="tg_Out" fx:id="tg_Out" layoutX="309.0" layoutY="660.0" strokeType="OUTSIDE" strokeWidth="0.0" text="no tag">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="cat_Out" fx:id="cat_Out" layoutX="309.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="no category">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="tot_trans_out_Out" fx:id="tot_trans_out_Out" layoutX="309.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="tot_trans_in_Out" fx:id="tot_trans_in_Out" layoutX="309.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="unconfirmed_sx_Out" fx:id="unconfirmed_sx_Out" layoutX="309.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00000000 BTC">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="unconfirmed_rx_Out" fx:id="unconfirmed_rx_Out" layoutX="309.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00000000 BTC">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="sent_Out" fx:id="sent_Out" layoutX="309.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00000000 BTC">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="received_Out" fx:id="received_Out" layoutX="309.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00000000 BTC">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="balance_Out" fx:id="balance_Out" layoutX="309.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00000000 BTC">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="hash_Out" fx:id="hash_Out" layoutX="309.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="no hash">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="address_Out" fx:id="address_Out" layoutX="309.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="no address">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button id="reset" fx:id="reset" layoutX="497.0" layoutY="107.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+      <Text id="error_Out" fx:id="error_Out" fill="RED" layoutX="248.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                                " textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <TextField id="inputAddress" fx:id="inputAddress" layoutX="59.0" layoutY="107.0" prefHeight="27.0" prefWidth="417.0" promptText="Enter address here" />
+      <Text layoutX="49.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Transactions:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="tot_trans_Out" fx:id="tot_trans_Out" layoutX="309.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Line layoutX="768.0" layoutY="80.0" startY="704.0" />
+      <Button id="settings" fx:id="settings" layoutX="614.0" layoutY="107.0" mnemonicParsing="false" onAction="#openSettings" text="Settings" textAlignment="CENTER" />
+      <Text layoutX="835.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Database:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="835.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Usage:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="835.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Amount:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="835.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Value:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="835.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Fee:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="835.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="835.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmations:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="835.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trading Partner:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="964.0" layoutY="698.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="1214.0" layoutY="698.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="806.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reputation Analysis:" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="25.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="General Information:" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Line endX="250.0" layoutX="1150.0" layoutY="643.0" startX="-250.0" />
+      <Text layoutX="1074.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score:" underline="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text id="scoreDatabase" fx:id="scoreDatabase" layoutX="1089.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="scoreFirstUsage" fx:id="scoreFirstUsage" layoutX="1089.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="scoreTransactionAmount" fx:id="scoreTransactionAmount" layoutX="1089.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="scoreTransactionValue" fx:id="scoreTransactionValue" layoutX="1089.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="scoreTransactionFee" fx:id="scoreTransactionFee" layoutX="1089.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="scoreBalance" fx:id="scoreBalance" layoutX="1089.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="scoreConfirmations" fx:id="scoreConfirmations" layoutX="1089.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="scoreTradingPartner" fx:id="scoreTradingPartner" layoutX="1089.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="scoreResult" fx:id="scoreResult" layoutX="1089.0" layoutY="698.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="grade" fx:id="grade" layoutX="1289.0" layoutY="698.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Grade">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="1150.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Factor:" underline="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text id="factorDatabase" fx:id="factorDatabase" layoutX="1163.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="factorFirstUsage" fx:id="factorFirstUsage" layoutX="1163.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="factorTransactionAmount" fx:id="factorTransactionAmount" layoutX="1163.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="factorTransactionValue" fx:id="factorTransactionValue" layoutX="1163.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="factorTransactionFee" fx:id="factorTransactionFee" layoutX="1163.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="factorBalance" fx:id="factorBalance" layoutX="1163.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="factorConfirmations" fx:id="factorConfirmations" layoutX="1163.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="factorTradingPartner" fx:id="factorTradingPartner" layoutX="1162.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="964.0" layoutY="743.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserRating:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text id="userRating" fx:id="userRating" layoutX="1089.0" layoutY="743.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="addressType" fx:id="addressType" layoutX="1250.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text id="tpY" fx:id="tpY" layoutX="1250.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="firstDate" fx:id="firstDate" layoutX="1250.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text id="numberTradingPartner" fx:id="numberTradingPartner" layoutX="1250.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
