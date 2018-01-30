@@ -51,6 +51,7 @@ public class SettingsController extends Controller{
 		analyzerSystem.getApplicationStage().getMainApplicationGroup().getChildren().remove(analyzerSystem.getApplicationStage().getMainApplicationGroup().getChildren().size() - 1);
 	}
 	
+	@Override
 	public void setAnalyzerSystem(AnalyzerSystem aS) {
 		analyzerSystem = aS;
 	}

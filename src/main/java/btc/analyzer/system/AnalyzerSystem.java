@@ -221,8 +221,6 @@ public class AnalyzerSystem {
 			addressThisScore = addressThisScore + ((Double)(highChangeCounter * -0.5)).intValue();
 		}
 		
-		addressThisScore = addressThisScore + (lowChangeCounter * 1);
-		
 		if(addressThis.getHaveOutAddress() == false) addressThisScore = 0;
 		
 		for(int k = 0; k <= transactions.length-1; k++)
@@ -250,6 +248,8 @@ public class AnalyzerSystem {
 		
 		if(addressThisScore > 50) addressThisScore = 50;
 		else if(addressThisScore < -50) addressThisScore = -50;
+		
+		addressThis.getScore()[3] = addressThisScore;		
 	}
 	
 	public void checkTransactionFees(Integer i) {
@@ -261,6 +261,7 @@ public class AnalyzerSystem {
 		Integer transactionSize = 0;
 		Integer transactionYear = 0;
 		Integer averageFee = 0;
+		Integer averageFeeBuffer = 0;
 		Integer averageFeeLower = 0;
 		Integer averageFeeHigher = 0;
 		Integer averageFeeSame = 0;
@@ -268,7 +269,8 @@ public class AnalyzerSystem {
 		Double percentLower = 0.0;
 		Double highestValue = 25.0;
 		Double highestValueOrigin = 0.0;
-		Boolean equal = false;
+		Integer inputValue = 0;
+		Integer outputValue = 0;
 		Random randomNumber = new Random();
 		
 		for(int n = 0; n <= transactions.length-1; n++)
@@ -276,20 +278,24 @@ public class AnalyzerSystem {
 			for(int x = 0; x <= transactions[n].getTransactionsIn().length-1; x++)	
 			{
 				try{
-					if(addressThis.getAddress().equals(transactions[n].getTransactionsIn()[x])) {
-						equal = true;
-					}
-					else {
-			
+					if(addressThis.getAddress().equals(transactions[n].getTransactionsIn()[x].getFromAddress())) {
+						inputValue = transactions[n].getTransactionsIn()[x].getValue();
 					}
 				}
-				catch (NullPointerException e)
-				{
-					
-				}
+				catch (NullPointerException e){}
 			}
-			if (equal = true)transactionsOut.add(transactions[n]);
-			equal = false; 
+			for(int l = 0; l <= transactions[n].getTransactionsOut().length-1; l++)	
+			{
+				try{
+					if(addressThis.getAddress().equals(transactions[n].getTransactionsOut()[l].getToAddress())) {
+						outputValue = transactions[n].getTransactionsOut()[l].getValue();
+					}
+				}
+				catch (NullPointerException e){}
+			}
+			if (inputValue >= outputValue) transactionsOut.add(transactions[n]);
+			inputValue = 0; 
+			outputValue = 0;
 		}
 		
 		for(int m = 0; m <= transactionsOut.size()-1; m++)
@@ -300,18 +306,16 @@ public class AnalyzerSystem {
 				transactionSize = (inputSize * 148) + (transactionsOut.get(m).getTransactionsOut().length * 34) + 10 + (randomNumber.nextInt(inputSize - 0 + 1) + 0) - (randomNumber.nextInt(transactionsOut.get(m).getTransactionsIn().length) + 0);
 				transactionYear = Integer.parseInt("" + transactionsOut.get(m).getTransactionTime().charAt(3));
 				averageFee = (transactionSize * satoshiPerByte[transactionYear]);
-				if(transactionsOut.get(m).getTransactionTotalFee() < averageFee) averageFeeLower++;
+				averageFeeBuffer = (averageFee / 100) * 5;
+				if(transactionsOut.get(m).getTransactionTotalFee() < (averageFee - averageFeeBuffer)) averageFeeLower++;
 				else {
-					if(transactionsOut.get(m).getTransactionTotalFee() > averageFee) averageFeeHigher++;
+					if(transactionsOut.get(m).getTransactionTotalFee() > (averageFee + averageFeeBuffer)) averageFeeHigher++;
 					else {
-						if(transactionsOut.get(m).getTransactionTotalFee() == averageFee) averageFeeSame++;
+						if(transactionsOut.get(m).getTransactionTotalFee() > (averageFee - averageFeeBuffer) && transactionsOut.get(m).getTransactionTotalFee() < (averageFee + averageFeeBuffer)) averageFeeSame++;
 					}
 				}	
 			}
-			catch (NullPointerException e)
-			{
-				
-			}
+			catch (NullPointerException e) {}
 		}
 		
 		if(averageFeeLower == transactionsOut.size()) addressThis.getScore()[4] = -25;
@@ -326,7 +330,6 @@ public class AnalyzerSystem {
 					highestValueOrigin = (highestValue / 100);
 					
 					highestValue = (highestValue - (highestValueOrigin * (percentLower.doubleValue())));
-					highestValue = (highestValue + (highestValueOrigin * (percentHigher.doubleValue())));
 					
 					if((highestValueOrigin * 100) > highestValue) {
 						addressThis.getScore()[4] = highestValue.intValue();

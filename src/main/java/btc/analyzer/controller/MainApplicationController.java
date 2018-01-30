@@ -5,13 +5,10 @@ import java.time.format.DateTimeFormatter;
 
 import btc.analyzer.address.Address;
 import btc.analyzer.system.AnalyzerSystem;
-import btc.analyzer.view.stage.ApplicationStage;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Font;
 import javafx.scene.paint.Color;
 
 
@@ -230,6 +227,7 @@ public class MainApplicationController extends Controller {
 		analyzerSystem.getApplicationStage().setSceneAndShow("settings");
 	}
 	
+	@Override
 	public void setAnalyzerSystem(AnalyzerSystem aS) {
 		analyzerSystem = aS;
 	}

@@ -1,7 +1,5 @@
 package btc.analyzer.address;
 
-import java.lang.reflect.Array;
-
 public class Transaction {
 	
 	private Address ownerAddress;
